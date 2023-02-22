@@ -52,41 +52,21 @@
       .line {
         border-bottom: 4px solid red;
       }
-
-      .container-fluid{
-        padding-top: 90px;
-      }
     </style>
   </head>
   <body>
-    <nav class="bg-primary fixed-top ">
+    <nav class="bg-primary">
       <ul>
-        <li><a href="./index.html">NHL </a></li>
-        <li><a href="./nba.html">NBA</a></li>
-        <li  ><a href="./mlb.html">MLB</a></li>
+        <li><a href="./index.html">NHL / NBA </a></li>
+        <li ><a href="./mlb.html">MLB</a></li>
         <li class="line"><a href="#">NCAAB </a></li>
       </ul>
     </nav>
 
+    <br />
     <div class="container-fluid"></div>
     <script src="./lib_fr/jquery.js"></script>
-    <script>
-      let display = document.querySelector(".container-fluid");
-      let i;
-      for (i = 1; i <= 50; i++) {
-        display.innerHTML += `
-            <div class="card ">
-            <button class="copybtn bg-secondary" onclick="copy(${i})">NCAAB${i}</button>
-        </div>
-        <br>`;
-
-        function copy(cid) {
-          let url = "http://www.cr7streams.ml/p/ncaa" + cid + ".html";
-
-          navigator.clipboard.writeText(url);
-        }
-      }
-    </script>
+    <script src="./ncaab.js"></script>
     <script src="./lib_fr/app.js"></script>
   </body>
 </html>
